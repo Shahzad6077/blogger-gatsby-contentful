@@ -1,10 +1,9 @@
-import React from "react"
+import React, { FC } from "react"
+import { PageProps } from "gatsby"
+import { BlogCard, Layout, SEO } from "../components"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { BlogCard } from "../components"
-
-const IndexPage = () => (
+type Props = {}
+const IndexPage: FC<PageProps<Props>> = () => (
   <Layout>
     <SEO title="Home" />
     <BlogCard

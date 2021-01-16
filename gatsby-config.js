@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Articles`,
+    title: `Blogger`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `M Shahzad Ali`,
   },
@@ -39,5 +39,23 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      // resolve: "gatsby-plugin-prefetch-google-fonts",
+      resolve: "gatsby-plugin-webfonts",
+      options: {
+        fonts: {
+          google: [
+            {
+              family: "Montserrat",
+              variants: [`400`, `600`, `700`, `800`],
+            },
+            {
+              family: "Quicksand",
+              variants: [`400`, `500`, `700`],
+            },
+          ],
+        },
+      },
+    },
   ],
 }

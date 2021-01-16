@@ -1,0 +1,30 @@
+.blog_header {
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    & > div {
+      position: relative;
+    }
+  }
+  &__dot {
+    display: inline-flex;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--black);
+    margin: 2px 6px;
+    opacity: 0.8;
+  }
+}
+
+.bloglink {
+  border-bottom: 2px dotted var(--gray);
+  margin-bottom: 1rem;
+  a {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0px;
+  }
+}

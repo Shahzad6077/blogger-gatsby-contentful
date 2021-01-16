@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
 /*
@@ -27,7 +27,12 @@ const Image = () => {
   `)
 
   if (!data?.placeholderImage?.childImageSharp?.fluid) {
-    return <div>Picture not found</div>
+    return (
+      <div>
+        Picture not found
+        <Link to="/asd"></Link>
+      </div>
+    )
   }
 
   return <Img fluid={data.placeholderImage.childImageSharp.fluid} />

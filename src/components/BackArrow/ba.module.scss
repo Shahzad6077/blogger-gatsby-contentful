@@ -1,0 +1,19 @@
+.backArrowWrapper {
+  position: absolute;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: #000;
+  }
+
+  p {
+    color: inherit;
+    font-size: max(14px, min(1vw, 18px));
+  }
+}

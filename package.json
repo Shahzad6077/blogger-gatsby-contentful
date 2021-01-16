@@ -5,8 +5,12 @@
   "version": "0.1.0",
   "author": "M Shahzad ALi Github: Shahzad6077",
   "dependencies": {
+    "dayjs": "^1.10.3",
+    "firebase": "^8.2.3",
+    "framer-motion": "^3.2.1",
     "gatsby": "^2.26.1",
     "gatsby-image": "^2.5.0",
+    "gatsby-plugin-firebase": "^0.2.0-beta.4",
     "gatsby-plugin-manifest": "^2.6.1",
     "gatsby-plugin-offline": "^3.4.0",
     "gatsby-plugin-react-helmet": "^3.4.0",

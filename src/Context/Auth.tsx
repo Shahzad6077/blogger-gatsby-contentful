@@ -35,7 +35,7 @@ const AuthProvider = ({ children }) => {
   const onLogout: any = () => {
     return firebase.auth().signOut()
   }
-  const isAuthenticated = user?.uid
+  const isAuthenticated = !!user?.uid
   return (
     <AuthContext.Provider
       value={{ user, isAuthenticated, onLogin, onSignup, onLogout }}

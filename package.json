@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "M Shahzad ALi Github: Shahzad6077",
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^14.1.2",
     "dayjs": "^1.10.3",
     "dotenv": "^8.2.0",
     "firebase": "^8.2.3",
@@ -19,6 +20,7 @@
     "gatsby-plugin-sass": "^3.0.0",
     "gatsby-plugin-sharp": "^2.8.0",
     "gatsby-plugin-webfonts": "^1.1.4",
+    "gatsby-source-contentful": "^4.4.1",
     "gatsby-source-filesystem": "^2.5.0",
     "gatsby-transformer-sharp": "^2.6.0",
     "prop-types": "^15.7.2",

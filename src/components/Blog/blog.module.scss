@@ -1,4 +1,8 @@
 .blog_header {
+  h2 {
+    padding-right: 4rem;
+  }
+
   &__info {
     display: flex;
     align-items: center;
@@ -16,6 +20,12 @@
     background: var(--black);
     margin: 2px 6px;
     opacity: 0.8;
+  }
+
+  @media (max-width: 640px) {
+    h2 {
+      padding-right: 0rem;
+    }
   }
 }
 

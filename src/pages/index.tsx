@@ -1,34 +1,39 @@
 import React, { FC } from "react"
-import { PageProps, Link } from "gatsby"
-import { BlogLink, Layout, SEO } from "../components"
-import { useAuthContext } from "../Context/Auth"
+import { PageProps, Link, graphql } from "gatsby"
+import { BlogLink, SEO } from "../components"
+import { BlogNodeData, ContentfulData } from "./../Types/contentful.interface"
 
-type Props = {}
-const IndexPage: FC<PageProps<Props>> = () => {
+type Props = {
+  data: ContentfulData
+}
+const IndexPage: FC<PageProps & Props> = ({ data }) => {
+  const blogsArr = data?.allContentfulBlogs.nodes || []
   return (
     <React.Fragment>
       <SEO title="Home" />
-      <BlogLink
-        title={`React Portals`}
-        slug={`react-portal`}
-        creator={`M Shahzad Ali`}
-        createdAt={new Date(2020, 5, 13)}
-      />
-      <BlogLink
-        title={`React Portals`}
-        slug={`react-portal`}
-        creator={`M Shahzad Ali`}
-        createdAt={new Date(2020, 7, 13)}
-      />
-      <BlogLink
-        title={`React Portals`}
-        slug={`react-portal`}
-        creator={`M Shahzad Ali`}
-        createdAt={new Date(2020, 8, 13)}
-      />
+      {blogsArr.map((data: BlogNodeData) => (
+        <BlogLink
+          key={`${data.id}`}
+          title={`${data.title[0]}`}
+          slug={`${data.title[1]}`}
+          creator={`${data.creatorName}`}
+          createdAt={new Date(data.createdAt)}
+        />
+      ))}
       <Link to="/404">go</Link>
     </React.Fragment>
   )
 }
-
+export const query = graphql`
+  query MyQuery {
+    allContentfulBlogs {
+      nodes {
+        id
+        createdAt
+        title
+        creatorName
+      }
+    }
+  }
+`
 export default IndexPage

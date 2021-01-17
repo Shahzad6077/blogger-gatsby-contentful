@@ -5,10 +5,7 @@
  */
 
 // You can delete this file if you're not using it
-import "firebase/auth"
-import "firebase/firestore"
-import "firebase/functions"
-
+import React from "react"
 import AppEnhancer from "./src/AppEnhancer"
 
 export const wrapRootElement = ({ element }) => (

@@ -6,7 +6,9 @@
   "author": "M Shahzad ALi Github: Shahzad6077",
   "dependencies": {
     "dayjs": "^1.10.3",
+    "dotenv": "^8.2.0",
     "firebase": "^8.2.3",
+    "formik": "^2.2.6",
     "framer-motion": "^3.2.1",
     "gatsby": "^2.26.1",
     "gatsby-image": "^2.5.0",
@@ -23,7 +25,9 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
-    "sass": "^1.32.4"
+    "react-hot-toast": "^1.0.1",
+    "sass": "^1.32.4",
+    "yup": "^0.32.8"
   },
   "devDependencies": {
     "prettier": "2.2.1"

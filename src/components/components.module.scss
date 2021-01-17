@@ -1,0 +1,23 @@
+.header {
+  color: var(--white);
+  & > div {
+    display: flex;
+    justify-content: space-between;
+  }
+  a {
+    color: var(--white);
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    & > * + * {
+      margin-left: 1rem;
+    }
+    a {
+      height: 100%;
+      border-bottom: 2px dotted;
+      align-items: center;
+      display: flex;
+    }
+  }
+}

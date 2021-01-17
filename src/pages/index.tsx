@@ -1,22 +1,12 @@
 import React, { FC } from "react"
 import { PageProps, Link } from "gatsby"
 import { BlogLink, Layout, SEO } from "../components"
-import firebase from "gatsby-plugin-firebase"
+import { useAuthContext } from "../Context/Auth"
 
 type Props = {}
 const IndexPage: FC<PageProps<Props>> = () => {
-  React.useEffect(() => {
-    // firebase
-    //   .database()
-    //   .ref("/data")
-    //   .once("value")
-    //   .then(snapshot => {
-    //     console.log(snapshot.val())
-    //   })
-  }, [])
-
   return (
-    <Layout>
+    <React.Fragment>
       <SEO title="Home" />
       <BlogLink
         title={`React Portals`}
@@ -37,7 +27,7 @@ const IndexPage: FC<PageProps<Props>> = () => {
         createdAt={new Date(2020, 8, 13)}
       />
       <Link to="/404">go</Link>
-    </Layout>
+    </React.Fragment>
   )
 }
 

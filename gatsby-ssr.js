@@ -8,3 +8,12 @@
 import "firebase/auth"
 import "firebase/firestore"
 import "firebase/functions"
+
+import AppEnhancer from "./src/AppEnhancer"
+
+export const wrapRootElement = ({ element }) => (
+  <AppEnhancer>
+    {/* <AuthProvider>{element}</AuthProvider> */}
+    {element}
+  </AppEnhancer>
+)

@@ -5,7 +5,14 @@
  */
 
 // You can delete this file if you're not using it
+import React from "react"
 import "./src/Styles/global.scss"
 import "firebase/auth"
-import "firebase/firestore"
-import "firebase/functions"
+import AuthProvider from "./src/Context/Auth"
+import AppEnhancer from "./src/AppEnhancer"
+
+export const wrapRootElement = ({ element }) => (
+  <AuthProvider>
+    <AppEnhancer>{element}</AppEnhancer>
+  </AuthProvider>
+)
